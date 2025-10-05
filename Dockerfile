@@ -8,8 +8,16 @@ WORKDIR /opt/app
 
 COPY config/easy-rsa.vars /etc/openvpn/config/easy-rsa.vars
 
-RUN apk --no-cache --no-progress upgrade && apk --no-cache --no-progress add bash bind-tools 
-oath-toolkit-oathtool curl ip6tables iptables openvpn easy-rsa
+RUN apk --no-cache --no-progress upgrade && apk --no-cache --no-progress add \
+    bash \
+    bind-tools \
+    oath-toolkit-oathtool \
+    curl \
+    ip6tables \
+    iptables \
+    openvpn \
+    easy-rsa
+
 
 #Install Latest RasyRSA Version
 RUN chmod 755 /usr/share/easy-rsa/*
