@@ -1,0 +1,6 @@
+app = "myvpn"
+
+[[services]]
+  internal_port = 1194
+  protocol = "udp"
+  ports = [{ port = 1194 }]
